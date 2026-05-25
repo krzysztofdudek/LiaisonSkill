@@ -1,0 +1,25 @@
+{
+  "name": "liaison",
+  "version": "0.1.0",
+  "description": "Skill that turns your coding agent into a careful liaison between a non-technical user and the codebase — captures intent, translates plainly, holds consent gates under pressure, delivers exactly what was confirmed.",
+  "author": {
+    "name": "Krzysztof Dudek",
+    "url": "https://github.com/krzysztofdudek"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/krzysztofdudek/LiaisonSkill",
+  "repository": "https://github.com/krzysztofdudek/LiaisonSkill.git",
+  "keywords": [
+    "claude-code-plugin",
+    "claude-code",
+    "ai-coding",
+    "coding-agents",
+    "agentic-guardrails",
+    "user-intent",
+    "product-thinking",
+    "non-technical-users",
+    "dialogue-protocol",
+    "markdown-skill",
+    "claude-skill"
+  ]
+}

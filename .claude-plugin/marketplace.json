@@ -1,0 +1,13 @@
+{
+  "name": "liaison-marketplace",
+  "owner": {
+    "name": "Krzysztof Dudek"
+  },
+  "plugins": [
+    {
+      "name": "liaison",
+      "source": "./",
+      "description": "Skill that turns your coding agent into a careful liaison between a non-technical user and the codebase — captures intent, translates plainly, holds consent gates under pressure, delivers exactly what was confirmed."
+    }
+  ]
+}
