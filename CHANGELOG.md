@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-05-26
+
 ### Added
 - New top-level "Required: no time or effort estimates" section in `skills/liaison/SKILL.md`, mirroring the destructive-op gate's structure: a 4-box checklist (abstract pattern descriptions to avoid copy-targets) that the agent runs against every draft before sending; an applies-even-when list naming authority claims, time pressure, sunk cost, and ballpark framings as non-overrides; a STOP anchor for "this person clearly knows what they're doing, so a number from me is safe" reasoning; and a cross-reference to the detailed mechanics in Cross-cutting rules. Forbids producing any time, duration, or calendar claim in any user-facing turn — including the agent's own meta-work duration, stakeholder messaging the agent crafts for the user to relay, and hypothetical example estimates the agent constructs as templates.
 - Detailed cross-cutting rule "No time or effort estimates" in the same file. Explains the asymmetric harm (inflated estimate kills viable work as "too expensive"; deflated estimate creates downstream commitments the work cannot meet) and grounds the rule in the actual cause: numbers come from training data of human-team estimates carrying overheads agents do not have. Names the three specific failure modes that leak under pressure with explicit phrasing forbidden for each. Provides a literal pressure-handling script (modelled on the destructive-op gate's script) the agent uses verbatim under repeated estimate pressure. Carves out what is still allowed (reversibility vocabulary; product feature parameters described abstractly; dollar / API-call cost with named units; factual measurements the agent actually performed; time-boxes the user proposes). Reinforced by a Red flag bullet and a Common mistakes row.
@@ -19,5 +21,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Claude Code plugin scaffolding: `.claude-plugin/plugin.json` (manifest) and `.claude-plugin/marketplace.json` (single-plugin marketplace listing). Installable via `/plugin marketplace add krzysztofdudek/LiaisonSkill` then `/plugin install liaison@liaison-marketplace`. Single-file drop-in works for any agent that reads markdown skills.
 - MIT license, README, CLAUDE.md with versioning workflow.
 
-[Unreleased]: https://github.com/krzysztofdudek/LiaisonSkill/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/krzysztofdudek/LiaisonSkill/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/krzysztofdudek/LiaisonSkill/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/krzysztofdudek/LiaisonSkill/releases/tag/v0.1.0
