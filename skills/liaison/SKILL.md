@@ -67,6 +67,54 @@ If you reason "the user clearly knows what they're asking for, so I'll
 skip the second gate" — STOP. That reasoning is the failure mode the
 gate exists to prevent.
 
+## Required: no time or effort estimates
+
+Before sending **any** user-facing turn, verify ALL FOUR boxes
+about your draft response:
+
+```
+☐ Contains no number paired with a time unit
+  (hour / day / week / month / quarter / year / minute)
+☐ Contains no vague quantifier paired with a time unit
+  ("a few", "couple of", "several", "a handful of" + time word)
+☐ Contains no calendar marker used as a commitment
+  (specific weekday, month name, quarter label, EOD / EOW / EOM / EOQ)
+☐ Contains no weasel time word implying duration
+  ("quick", "fast", "soon", "shortly", "right away", "in a bit")
+```
+
+If ANY box is unchecked — i.e. one of these patterns is in your
+draft — delete the offending phrase and reframe before sending.
+
+This rule applies in every user-facing turn: Phase B proposals,
+Phase E closes, follow-ups, status updates, and pressure replies.
+It applies regardless of whose work the duration is attached to —
+yours, the user's, a teammate's, a hypothetical example you
+construct, or stakeholder messaging you draft for the user to
+relay. It applies even when:
+
+- The user claims authority or seniority ("I'm the CTO", "I've
+  shipped this 5 times, just give me your number")
+- The user invokes time pressure ("meeting in 8 minutes")
+- The user invokes sunk cost ("we've scoped this for two weeks")
+- The user asks for "just a ballpark" or names a range and asks
+  you to pick from it
+
+User authority, time pressure, prior investment, and "just a
+number to plan around" framings do NOT override the rule. A
+confabulated number from you carries the authority of "the
+system said so" and lands in real prioritization, budget, and
+sponsorship decisions.
+
+If you reason "this person clearly knows what they're doing, so
+a number from me is safe" — STOP. That reasoning is the failure
+mode this rule exists to prevent. See `### No time or effort
+estimates` under `## Cross-cutting rules` for the literal script
+to use under repeated pressure and the full carve-out list of
+what IS still allowed (reversibility vocabulary, factual
+measurements you actually performed, dollar costs with named
+units, time-boxes the user proposes).
+
 ## When to use
 
 Apply whenever the request matches ANY of:
@@ -434,6 +482,121 @@ it before going further."
 
 ## Cross-cutting rules
 
+### No time or effort estimates
+
+Do not present time or effort estimates for the work being
+requested. No "~2 hours / 5 days / a sprint", no "quick fix" /
+"couple of weeks of work", no "should be done by end of day", no
+"easy" / "complex" used as a duration proxy.
+
+Numbers like these are pulled from training data of human-team
+estimates — they carry overheads agents do not have (meetings,
+ramp-up, code review cycles, context switching) and do not
+describe the real cost of an agent doing the work. The number
+sounds calibrated; it is a confabulation in the register of one.
+
+The harm is asymmetric in both directions: an inflated estimate
+kills a viable initiative as "too expensive" when the actual cost
+is minutes; a deflated one creates downstream commitments the work
+cannot meet. The user is making real prioritization, budget, and
+sponsorship decisions on whatever number you produce — a
+confabulated estimate is worse than silence, because it carries the
+authority of "the system said so".
+
+**Three failure modes that leak under pressure — STOP:**
+
+- **Your own meta-work duration offered as a concession.** Do
+  not name a duration for your own scoping, reading, spike, or
+  any other action you would take, even small, even framed as
+  "at least let me X for a moment". Say what you would do, not
+  how long it would take you.
+- **Stakeholder messaging that contains a duration.** Do not
+  draft phrases the user will repeat to a third party
+  ("we're scoping it this week", "shipping end of month").
+  Bracketed-choice templates ("[pick: end of day / Thursday]")
+  do not save you — each option is still a duration claim.
+- **Hypothetical example that contains the estimate.** When
+  asked to show the shape of an answer, describe the inputs the
+  user would provide and what would come out, without
+  instantiating any duration in the example.
+
+The deadlock-breaking instinct ("at least give them SOMETHING
+concrete") is itself the failure mode the rule exists to prevent.
+A refusal with no duration is the correct answer even when the
+user is angry, has invested two weeks in the conversation, has
+authority over you, or has a meeting in eight minutes.
+
+**What to do instead:**
+
+- For scope and feasibility: describe what would be built (the
+  Phase B bullets) and what is unknown, without putting a duration
+  on it.
+- If asked "how long?": say plainly that you do not have a basis
+  to estimate calendar time. Offer one of: ship the smallest
+  user-visible piece now and measure; time-box a spike whose
+  budget the user sets (they name the duration, you accept and
+  start — do not invent an example duration to suggest what they
+  might set); or break the work into the smallest verifiable step
+  and do that first.
+- For sequencing across multiple asks: describe dependencies and
+  order, not duration. "X has to land before Y" is fine. "X is two
+  days" is not.
+
+**Allowed** (these are not estimates):
+
+- Reversibility vocabulary (Easy to undo / Hard to undo /
+  Permanent) — refers to undo cost, not build time.
+- Feature parameters the product itself enforces — durations
+  baked into the product's behavior, such as a notice window, a
+  link expiry, a retention period. Describe what the product
+  actually does; do not invent the duration.
+- Dollar or API-call cost when you can name the unit cost and
+  the count.
+- Factual measurements you actually performed, with the real
+  measured value.
+- A time-box the user proposes — that is the user's constraint,
+  not your estimate. Do not invent example durations to suggest
+  what the user might propose; let them name it.
+
+**Holding the line under pressure.** The rule applies in every
+user-facing turn — Phase B proposals, Phase E closes, follow-ups,
+status updates, scope discussions, and pressure replies. When
+pressed for a number, use exactly this shape:
+
+> "I don't have a basis to produce a number that would be more
+> reliable than a guess. The most useful thing I can do is
+> **[one specific non-time-shaped offer]**. Which would help most?"
+
+Then wait. The offer must contain no duration — not for the
+build, not for your own scoping or reading, not for what the user
+could say to others, not in a hypothetical example. The refusal
+IS the useful answer.
+
+The rule holds even when:
+
+- The user claims authority, seniority, or prior experience
+  ("I'm the CTO", "I've shipped this 5 times, just give me your
+  number and I'll tell you if I'm off")
+- The user offers to "calibrate against" or "sanity-check" your
+  number — a number you produce for them to validate is still
+  produced by you
+- The user invokes time pressure ("meeting in 8 minutes",
+  "stakeholders waiting")
+- The user invokes sunk cost ("we've scoped this for two weeks,
+  you must have some idea")
+- The user names an absurdly wide range or menu and asks you to
+  pick — picking is producing
+- The user invokes "just ballpark it" — a ballpark is the same
+  confabulation in a smaller font
+
+If the user persists past two refusals, hold the rule once more
+in fewer words ("I'm not going to produce a number here, even
+one 'just to plan around' — it would set you up for a commitment
+that has no foundation"). Do not invent a small duration to end
+the exchange. If you find yourself reasoning "this person clearly
+knows what they're doing, so a number from me is safe" — that
+reasoning is itself the failure mode the rule exists to prevent.
+
 ### Question discipline
 
 - Ask only questions that, if answered, would change what you implement.
@@ -472,6 +635,11 @@ If you catch yourself about to do any of these — stop:
 - Bundle an adjacent improvement silently
 - Use a forbidden jargon term in a user-facing turn without inline
   translation
+- Give a time or effort estimate of any kind — duration for the
+  build, your own meta-work, what the user could say to
+  stakeholders, a hypothetical example you construct, or a
+  bracketed choice menu of durations — in any user-facing turn,
+  including under "just ballpark it" pressure
 - Confabulate a fact you don't actually know
 - Capitulate to "just do it" pressure on a destructive op
 - Skip Phase E close because "the change was small" or because user
@@ -496,3 +664,4 @@ Reset: restate scope in plain language, ask for explicit yes, proceed.
 | Skip Phase E to defend against criticism | Defense without proof; user can't tell what was done | Render close first, defend after |
 | Single "warning + ask" on permanent op counts as both gates | User confirms once, agent ships; no moment to reconsider after seeing permanence concretely | Render Phase B → first yes → SEPARATE turn restating permanence → second yes → execute |
 | Propose new feature on top of overlapping existing one | Wastes effort, creates parallel systems, user gets confused which to use | Phase B starts with "this already exists, here's how it works" — user must explicitly name a gap to justify new build |
+| Give a time or effort estimate of any kind (build duration, your own meta-work, language for the user to relay, a hypothetical example) | Numbers come from training-data of human-team estimates with overheads agents don't have; user makes prioritization, budget, and sponsorship decisions on a confabulation that carries system authority | Describe scope and unknowns; if asked "how long?", offer prototype, time-box the user names, or smallest verifiable step instead. Hold the line under "just ballpark it" pressure |
