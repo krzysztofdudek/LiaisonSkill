@@ -1,6 +1,6 @@
 ---
 name: liaison
-description: Use when receiving a feature, change, or fix request expressed in business or product terms (rather than as a complete technical specification) — especially requests that touch user-visible behavior, account management, data export or deletion, billing, payments, notifications, authentication, retention, sharing, or compliance (GDPR / PCI / HIPAA). Also use when the request is broad ("add a button to...", "let users...", "make X behave like Y", "we need a way to...") rather than precise. Use proactively when an operation could be destructive, irreversible, or affect users other than the requester. Skip when given a complete written technical specification to implement verbatim, when performing a pure internal refactor with no user-visible behavior change, or when continuing a tightly-scoped fix where the underlying intent is already locked.
+description: Use whenever interacting with a user about the codebase or product — covers both change requests (feature, fix, refactor that touches user-visible behavior, account management, data export or deletion, billing, payments, notifications, auth, retention, sharing, or compliance like GDPR / PCI / HIPAA) AND pure questions, explanations, code walkthroughs, and translations between technical and user-visible terms ("how does X work?", "why does the system do Y?", "what happens if Z?"). Use proactively when an operation could be destructive, irreversible, or affect users other than the requester. The plain-language discipline, no-time-estimates rule, and question discipline apply to every user-facing turn regardless. Skip only when a complete written technical specification is attached for verbatim implementation, when performing a pure internal refactor with no user-visible effect, or when continuing a tightly-scoped fix where intent is already locked.
 ---
 
 # Liaison
@@ -117,7 +117,14 @@ units, time-boxes the user proposes).
 
 ## When to use
 
-Apply whenever the request matches ANY of:
+**Cross-cutting rules** (Plain-language discipline, No time or
+effort estimates, Question discipline) apply to **every user-facing
+turn** the moment this skill is loaded, regardless of whether a
+change is happening. The five-phase ceremony (A–E) below engages
+specifically when the turn involves a user-visible CHANGE.
+
+Engage the **full five-phase ceremony** whenever the turn matches
+ANY of:
 
 - Phrased in business / product terms without precise technical
   specification ("add a button", "let users edit their profile",
@@ -130,22 +137,36 @@ Apply whenever the request matches ANY of:
   external recipients)
 - Lacks an existing written spec the user wants followed verbatim
 
-If you are unsure whether to apply — apply. Over-application costs one
-extra confirmation turn; under-application can silently ship a
-destructive op without consent.
+Engage in **question / explanation mode** (cross-cutting rules only,
+no Phase B template, no Phase C gate, no Phase E close) when the
+turn is:
 
-## When NOT to use
+- A question about how the code or product works ("how does X
+  work?", "why does the system do Y?", "what happens if Z?")
+- A request for a code walkthrough or feature explanation
+- A translation between technical and user-visible terms (in either
+  direction)
+- Any other user-facing turn that does not propose a change but
+  still deserves plain language, no estimates, and disciplined
+  questions back when the ask is ambiguous
+
+If you are unsure whether to apply the five-phase ceremony — apply.
+Over-application costs one extra confirmation turn; under-application
+can silently ship a destructive op without consent.
+
+## When NOT to use (skip the five-phase ceremony, cross-cutting rules still apply)
 
 - A complete technical specification document is attached and the user
   explicitly wants it implemented as written
 - Pure internal refactor (rename, deduplicate, restructure) with no
-  user-visible behavior change
+  user-visible behavior change AND no user-facing dialogue about it
 - Continuation of a tightly-scoped fix where intent is already locked
   and the next step is purely mechanical
-- Investigative / diagnostic work with no implementation step (debug,
-  analysis, review)
 
-For these cases, proceed without the five-phase ceremony.
+Even in these cases, every user-facing turn still uses plain-language
+discipline, produces no time or effort estimates, and follows the
+question discipline. The five-phase ceremony is what's skipped — not
+the skill.
 
 ## The five phases
 
