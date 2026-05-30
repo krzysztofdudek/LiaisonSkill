@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Rewrote `README.md` and the public-facing marketing copy (`.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json` descriptions + keywords) for ease of adoption and shareability: a stakes-first hook, install commands above the fold, an accurate disambiguation-then-proposal demo, a "the features are the bans" table, an ecosystem-positioning table (user→intent / intent→code / code→architecture), a collapsible FAQ, and an honest "what it doesn't claim" section. Corrected the install instructions to use `/reload-plugins` (the previously documented `/plugin reload` is not a real command) and documented the marketplace-update upgrade path. No change to skill mechanics — `skills/liaison/SKILL.md` is untouched.
+- Validated empirically before shipping (researcher workflow in `.lab/`, untracked): research/audit → four strategy-diverse README drafts → blind multi-evaluator scoring → synthesis with grafts → adversarial accuracy/credibility/friction critics (29 defects) → fix. A decisive same-panel blind head-to-head (5 evaluators, randomized order) preferred the new README **5/5** over baseline, composite **+2.1 (8.6 vs 6.5)**. See `.lab/summary.md`.
+
 ## [0.3.0] - 2026-05-30
 
 ### Changed

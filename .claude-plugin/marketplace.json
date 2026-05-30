@@ -7,7 +7,7 @@
     {
       "name": "liaison",
       "source": "./",
-      "description": "Skill that turns your coding agent into a careful liaison between a non-technical user and the codebase — captures intent, translates plainly, holds consent gates under pressure, delivers exactly what was confirmed."
+      "description": "Makes your coding agent read your request back in your own words, wait for an explicit yes, then build the confirmed scope — with two confirmation gates before anything permanent or compliance-relevant, no jargon, no invented timelines, and a check you run yourself."
     }
   ]
 }
