@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-05-30
+
+### Changed
+- Restructured the **Question discipline** cross-cutting rule in `skills/liaison/SKILL.md` into an explicit clarifying-question protocol: one decision per clarifying turn; verify the premise before asking and re-pose the question if a stated fact later proves false; a fixed shape for a real fork (**Context / Question / Options / Recommended default**), rendered as an explicit list, with a "keep simple questions simple" allowance so a binary or low-stakes disambiguation can still use a one-line closed question + veto; and an explicit carve-out that the protocol governs clarifying QUESTIONS only and never overrides the Phase B read-back (which still bundles the whole scoped decision set into one confirm/veto). Preserves the prior rule's intent — ask only real forks, never leading, past-behavior / present-pain framing, state-the-default-and-offer-a-veto. The prior ≤5-question ceiling is **dropped**: real forks are not capped (a genuinely multi-fork task may legitimately span many clarifying turns), with only a floor retained (≥1 clarifying turn on a destructive or ambiguous ask) and a guard against padding with non-real questions. Applies on every user-facing turn, including pure question / explanation turns.
+- Validated empirically before shipping (A/B harness in `.lab/`, untracked): five candidate skill variants × scripted dialogues on a generic-SaaS fixture × Sonnet ×5, each transcript scored by 3 blind Haiku evaluators on a 5-dimension rubric (question quality, plain-language, proportionality, gate integrity, no-estimates). The structured format landed within measurement noise of baseline on the composite (no regression) with a small directional gain on proportionality. Two further proposals were measured and **dropped**: an "autonomous mode" clause (it measurably weakened the destructive-op two-gate) and an audience-based relaxation of the plain-language rule (its benefit could not be demonstrated, and it added a judgment call to a deliberately bright-line rule). See `.lab/summary.md`.
+
 ## [0.2.0] - 2026-05-26
 
 ### Changed
@@ -24,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Claude Code plugin scaffolding: `.claude-plugin/plugin.json` (manifest) and `.claude-plugin/marketplace.json` (single-plugin marketplace listing). Installable via `/plugin marketplace add krzysztofdudek/LiaisonSkill` then `/plugin install liaison@liaison-marketplace`. Single-file drop-in works for any agent that reads markdown skills.
 - MIT license, README, CLAUDE.md with versioning workflow.
 
-[Unreleased]: https://github.com/krzysztofdudek/LiaisonSkill/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/krzysztofdudek/LiaisonSkill/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/krzysztofdudek/LiaisonSkill/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/krzysztofdudek/LiaisonSkill/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/krzysztofdudek/LiaisonSkill/releases/tag/v0.1.0

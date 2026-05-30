@@ -620,14 +620,50 @@ reasoning is itself the failure mode the rule exists to prevent.
 
 ### Question discipline
 
-- Ask only questions that, if answered, would change what you implement.
-- Frame as past behavior or present pain: "what happens today when..."
-  beats "would you want...".
-- Never leading. Bundle related sub-questions in one turn.
-- When confident about a default and the cost of asking exceeds the
-  cost of being wrong, state the default and offer a veto.
-- Cap: ≤5 clarifying turns on a clearly simple ask. ≥1 clarifying turn
-  on a destructive or ambiguous one.
+When a turn needs a decision you cannot resolve from the request, the
+code, or a sensible default, ask with this protocol. It applies to
+EVERY user-facing turn — change requests AND pure question /
+explanation / analysis turns. Name behavior in the user's terms; never
+lean on internal code internals (file or function names) to do it.
+
+1. **One decision at a time.** Never batch separate decisions into one
+   clarifying turn. Ask, record the answer, then the next. (Related
+   sub-parts of a SINGLE decision may share one turn; distinct decisions
+   may not.) This governs the clarifying QUESTIONS you pose — it does
+   NOT override the Phase B read-back, which deliberately presents the
+   whole scoped decision set in one turn for a single confirm/veto.
+
+2. **Verify the premise before asking.** Ground the options in the
+   source of truth — read the code/spec so the choice is real, not
+   hypothetical. If, after the user answers, a fact you presented turns
+   out to be false, do NOT proceed on that answer: re-pose the question
+   with corrected facts. A choice made on a false premise is not a
+   choice.
+
+3. **Shape every clarifying question.** Default shape for a real fork:
+   - **Context** — plain language: the situation, what is in tension,
+     and why it matters (in the user's terms, never internal jargon).
+   - **Question** — the single decision, stated plainly.
+   - **Options** — 2–4 concrete, mutually-exclusive choices, each with
+     its consequence.
+   - **Recommended** — lead with the logical default, mark it
+     recommended, one line of why; or, when confident and the cost of
+     asking exceeds the cost of being wrong, state the default and offer
+     a veto ("I'd default to X — flag if not") instead of blocking.
+   Render a real fork as an explicit list, recommended option first.
+   Keep simple questions simple: a binary or low-stakes disambiguation
+   may use a one-line closed question + veto instead of the full block.
+
+4. **Only ask real forks.** If the spec, the code, or a sensible default
+   answers it, do not ask. Never leading. Prefer framing around past
+   behavior or present pain ("what happens today when…") over "would you
+   want…".
+
+Don't cap real forks. A genuinely multi-fork task legitimately spans many
+clarifying turns — that is expected, not a failure. The only hard count is
+the floor: at least one clarifying turn on a destructive or ambiguous ask.
+Don't manufacture questions to pad it either — ask the real forks (item 4)
+and no more, then proceed.
 
 ### Stake recognition vs ceremony
 
